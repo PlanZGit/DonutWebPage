@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Shop</title>
+
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/sidebar.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/product-grid.css" />
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="left-section">
+      <div class="shop-name" id="shop-name">
+        Deez Donut's
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="horizontal-container">
+        <button class="cart">Cart
+          <div class="cart-amount" id="cart-amount">
+            12
+          </div>
+        </button>
+        <button class="about-us">About Us</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <div class="sidebar-icons">
+      <button class="sidebar-button-icons" id='ring'>
+        <div class="icons-label">RING</div>
+        <img src="icons/ring.png" alt="rings" class="icon-img">
+      </button>
+      <button class="sidebar-button-icons" id='bar'>
+        <div class="icons-label">BAR</div>
+        <img src="icons/bar.png" alt="rings" class="icon-img">
+      </button>
+      <button class="sidebar-button-icons" id='bismark'>
+        <div class="icons-label">BISMARK</div>
+        <img src="icons/bismark.png" alt="rings" class="icon-img">
+      </button>
+  </nav>
+
+  <main>
+    <section class="product-grid" id="product-grid-id">
+    </section>
+  </main>
+
+  <script src="javaScript/model.js"></script>
+  <script src="javaScript/controller.js"></script>
+  <script src="javaScript/view.js"> </script>
+
+</body>
+
+</html>
