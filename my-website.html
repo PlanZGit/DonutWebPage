@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/general.css" />
   <link rel="stylesheet" href="styles/sidebar.css" />
   <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
   <link rel="stylesheet" href="styles/product-grid.css" />
 
 </head>
@@ -19,14 +20,13 @@
   <header class="header">
     <div class="left-section">
       <div class="shop-name" id="shop-name">
-        Deez Donut's
+        <h1>Deez Donut's</h1>
       </div>
     </div>
     <div class="right-section">
       <div class="horizontal-container">
-        <button class="cart">Cart
+        <button class="cart-button" id="cart-button">Cart
           <div class="cart-amount" id="cart-amount">
-            12
           </div>
         </button>
         <button class="about-us">About Us</button>
@@ -52,6 +52,40 @@
 
   <main>
     <section class="product-grid" id="product-grid-id">
+    </section>
+
+    <section class="cart-checkout-section" id="cart-checkout-section">
+      <h2> Cart Checkout </h2>
+      <div class="cart-checkout">
+        <div class="cart-preview"> cart-preview
+          <div id="cart-preview">
+            cart-preview-container
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contact">
+            <h3>Contact Information</h3>
+            <div class="contact-info">
+              <input type="text" placeholder="FirstName">
+              <input type="text" placeholder="LastName">
+              <br>
+              <input type="text" placeholder="Phone Number 123-456-7890">
+              <input type="text" placeholder="Address 1234 StreetName apt 123">
+            </div>
+
+            <h3>Billing Information</h3>
+            <div class="bill-info">
+              <input type="text" placeholder="Card Owner Name">
+              <input type="text" placeholder="Card Number">
+              <br>
+              <input type="text" placeholder="CVV (Back Number)">
+              <input type="text" placeholder="Exp. Date">
+            </div>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 

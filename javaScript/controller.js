@@ -19,6 +19,11 @@ document.getElementById("shop-name").addEventListener("click", function () {
   renderHomePage();
 });
 
+document.getElementById("cart-button").addEventListener("click", function () {
+  resetGrid();
+  renderCartPreview();
+});
+
 const buyBox = (itemType) => {
   return () => {
     setCart(itemType, 12);

@@ -1,0 +1,37 @@
+.cart-checkout-section {
+  visibility: hidden;
+}
+
+.cart-checkout {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  gap: 20px;
+  /* border: 10px solid rgb(255, 186, 179); */
+}
+
+.cart-preview,
+.contact-form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border: 5px solid rgb(255, 186, 179);
+  padding-bottom: 14px;
+}
+
+/* .contact-info,
+.bill-info {
+  border: 5px solid rgb(255, 186, 179);
+} */
+
+@media (max-width: 530px) {
+  .cart-checkout {
+    flex-direction: column;
+  }
+  .cart-preview,
+  .contact-form,
+  .contact-info,
+  .bill-info {
+    width: 100%;
+  }
+}

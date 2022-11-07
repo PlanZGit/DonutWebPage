@@ -10,6 +10,9 @@ const products = {
   twist: ["glaze", "cinnamon-Sugar"],
   Roll: ["glaze-cinnamon"],
 };
+const productsPrice = 0.5;
+const productsBoxPrice = 5.99;
+
 let cart = {};
 
 function setCart(donut, amount) {
@@ -18,5 +21,13 @@ function setCart(donut, amount) {
   } else {
     cart[donut] = amount;
   }
-  renderCart();
+  renderCartAmount();
+}
+
+function getProducts() {
+  return products;
+}
+
+function getCart() {
+  return cart;
 }
