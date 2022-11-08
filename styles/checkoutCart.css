@@ -2,8 +2,9 @@
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .cart-checkout {
@@ -20,6 +21,8 @@
   align-items: center;
   border: 5px solid rgb(255, 186, 179);
   padding: 8px;
+
+  border-radius: 5px;
 }
 
 .contact-info,

@@ -1,5 +1,5 @@
 //Visual
-// renderHomePage();
+renderHomePage();
 
 function renderHomePage() {
   Object.keys(getProducts()).forEach((element) => {
