@@ -77,13 +77,29 @@ function renderCartAmount() {
 
 function renderCartPreview() {
   document.getElementById("cart-checkout-section").style.visibility = "visible";
-  // document.getElementById("cart-preview-container").innerHTML = "";
-  // let items = document.createElement("div");
-  // let cart = getCart();
-  // Object.keys(getCart()).forEach((element) => {
-  //   items.innerHTML = element + " x" + cart[element];
-  // });
-  // document.getElementById("cart-preview-container").appendChild(items);
-  cartJSON = JSON.stringify(getCart());
-  document.getElementById("cart-preview").innerHTML = cartJSON;
+  document.getElementById("cart-preview").innerHTML = "";
+
+  Object.keys(getCart()).forEach((element) => {
+    let itemContainer = document.createElement("div");
+    itemContainer.style.display = "flex";
+    itemContainer.style.justifyContent = "space-between";
+    itemContainer.style.padding = "4px";
+
+    let items = document.createElement("div");
+    items.innerHTML = element + " x" + cart[element];
+
+    let itemCost = document.createElement("div");
+    // itemCost.innerHTML = getCost(cart[element]);
+
+    itemContainer.appendChild(items);
+    itemContainer.appendChild(itemCost);
+
+    document.getElementById("cart-preview").appendChild(itemContainer);
+  });
+
+  renderTotal();
+}
+
+function renderTotal() {
+  document.getElementById("total-cost").innerHTML = "$" + getTotal();
 }

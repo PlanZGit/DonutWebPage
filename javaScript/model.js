@@ -14,6 +14,7 @@ const productsPrice = 0.5;
 const productsBoxPrice = 5.99;
 
 let cart = {};
+let total = 0;
 
 function setCart(donut, amount) {
   if (donut in cart) {
@@ -30,4 +31,12 @@ function getProducts() {
 
 function getCart() {
   return cart;
+}
+
+function setTotal(amount) {
+  total = total + amount;
+}
+
+function getTotal() {
+  return total.toFixed(2);
 }

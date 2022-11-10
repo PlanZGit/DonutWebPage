@@ -13,16 +13,30 @@
   /* border: 10px solid rgb(255, 186, 179); */
 }
 
-.cart-preview,
+.cart-preview {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(255, 186, 179);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px;
+  border: 2px solid rgb(255, 125, 125);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 5px solid rgb(255, 186, 179);
-  padding: 8px;
-
   border-radius: 5px;
+  padding: 8px;
 }
 
 .contact-info,
