@@ -27,11 +27,13 @@ document.getElementById("cart-button").addEventListener("click", function () {
 const buyBox = (itemType) => {
   return () => {
     setCart(itemType, 12);
+    setTotal(12);
   };
 };
 
 const buyOne = (itemType) => {
   return () => {
     setCart(itemType, 1);
+    setTotal(12);
   };
 };

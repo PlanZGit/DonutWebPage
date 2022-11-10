@@ -89,7 +89,7 @@ function renderCartPreview() {
     items.innerHTML = element + " x" + cart[element];
 
     let itemCost = document.createElement("div");
-    // itemCost.innerHTML = getCost(cart[element]);
+    itemCost.innerHTML = "$" + (cart[element] * 0.5).toFixed(2);
 
     itemContainer.appendChild(items);
     itemContainer.appendChild(itemCost);

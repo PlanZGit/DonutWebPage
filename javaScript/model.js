@@ -34,7 +34,7 @@ function getCart() {
 }
 
 function setTotal(amount) {
-  total = total + amount;
+  total = total + productsPrice * amount;
 }
 
 function getTotal() {
