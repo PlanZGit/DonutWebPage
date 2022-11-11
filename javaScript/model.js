@@ -33,6 +33,10 @@ function getCart() {
   return cart;
 }
 
+function removeCartItem(item) {
+  delete cart[item];
+}
+
 function setTotal(amount) {
   total = total + productsPrice * amount;
 }

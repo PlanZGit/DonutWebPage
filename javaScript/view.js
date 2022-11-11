@@ -81,18 +81,38 @@ function renderCartPreview() {
 
   Object.keys(getCart()).forEach((element) => {
     let itemContainer = document.createElement("div");
-    itemContainer.style.display = "flex";
-    itemContainer.style.justifyContent = "space-between";
-    itemContainer.style.padding = "4px";
+    itemContainer.className = "item-container";
 
     let items = document.createElement("div");
     items.innerHTML = element + " x" + cart[element];
 
     let itemCost = document.createElement("div");
+    itemCost.className = "item-cost";
     itemCost.innerHTML = "$" + (cart[element] * 0.5).toFixed(2);
 
+    let buttonContainer = document.createElement("div");
+    buttonContainer.className = "buttonContainer";
+
+    let editButton = document.createElement("button");
+    editButton.innerText = "edit";
+    editButton.className = "editButton";
+
+    let removeButton = document.createElement("button");
+    removeButton.innerText = "remove";
+    removeButton.className = "removeButton";
+    removeButton.onclick = removeItem(element, cart[element]);
+
+    let container = document.createElement("div");
+    container.className = "container";
+
+    buttonContainer.appendChild(editButton);
+    buttonContainer.appendChild(removeButton);
+
+    container.appendChild(itemCost);
+    container.appendChild(buttonContainer);
+
     itemContainer.appendChild(items);
-    itemContainer.appendChild(itemCost);
+    itemContainer.appendChild(container);
 
     document.getElementById("cart-preview").appendChild(itemContainer);
   });

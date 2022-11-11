@@ -24,9 +24,10 @@
 .total-cost {
   display: flex;
   justify-content: space-between;
-
   padding: 8px;
   border: 2px solid rgb(255, 125, 125);
+
+  margin-top: 10px;
 }
 
 .contact-form {
@@ -37,6 +38,37 @@
   border: 5px solid rgb(255, 186, 179);
   border-radius: 5px;
   padding: 8px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.item-container .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonContainer {
+  margin-left: 20px;
+}
+
+.item-cost {
+}
+
+.removeButton,
+.editButton {
+  font-size: smaller;
+  text-decoration: underline;
+  padding: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
 }
 
 .contact-info,

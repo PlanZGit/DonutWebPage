@@ -34,6 +34,15 @@ const buyBox = (itemType) => {
 const buyOne = (itemType) => {
   return () => {
     setCart(itemType, 1);
-    setTotal(12);
+    setTotal(1);
+  };
+};
+
+const removeItem = (itemType, amount) => {
+  return () => {
+    removeCartItem(itemType);
+    setTotal(amount * -1);
+    renderCartAmount();
+    renderCartPreview();
   };
 };
