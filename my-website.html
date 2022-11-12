@@ -65,31 +65,30 @@
 
             </div>
 
-            <div class="total-cost">
-              Total Cost
-              <div id="total-cost">
+            <div class="total-cost" id="total-cost">
 
-              </div>
+
+
             </div>
           </div>
 
-          <form class="contact-form" id="contact">
+          <form class="contact-form" id="contact" action="/action_page.php">
             <h3>Contact Information</h3>
             <div class="contact-info">
-              <input type="text" placeholder="FirstName">
-              <input type="text" placeholder="LastName">
-
-              <input type="text" placeholder="Phone Number 123-456-7890">
-              <input type="text" placeholder="Address 1234 StreetName apt 123">
+              <input type="text" placeholder="FirstName" required>
+              <input type="text" placeholder="LastName" required>
+              <input type="email" placeholder="Email" required>
+              <input type="text" placeholder="Phone Number 123-456-7890" required>
+              <input type="text" placeholder="Address 1234 StreetName apt 123" required>
             </div>
 
             <h3>Billing Information</h3>
             <div class="bill-info">
-              <input type="text" placeholder="Card Owner Name">
-              <input type="text" placeholder="Card Number">
+              <input type="text" placeholder="Card Owner Name" required>
+              <input type="text" placeholder="Card Number" required>
 
-              <input type="text" placeholder="CVV (Back Number)">
-              <input type="text" placeholder="Exp. Date">
+              <input type="text" placeholder="CVV (Back Number)" required>
+              <input type="text" placeholder="Exp. Date" required>
             </div>
             <input type="submit" value="Submit">
           </form>

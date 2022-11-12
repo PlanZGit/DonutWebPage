@@ -23,6 +23,7 @@
 
 .total-cost {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 8px;
   border: 2px solid rgb(255, 125, 125);
@@ -52,10 +53,11 @@
 }
 
 .buttonContainer {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .item-cost {
+  margin-right: 20px;
 }
 
 .removeButton,

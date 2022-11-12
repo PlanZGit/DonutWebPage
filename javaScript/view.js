@@ -96,6 +96,7 @@ function renderCartPreview() {
     let editButton = document.createElement("button");
     editButton.innerText = "edit";
     editButton.className = "editButton";
+    editButton.onclick = editItem(element);
 
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
@@ -105,11 +106,26 @@ function renderCartPreview() {
     let container = document.createElement("div");
     container.className = "container";
 
+    let parentButtonContainer = document.createElement("div");
+    parentButtonContainer.className = "parentButtonContainer";
+
+    let quantity = document.createElement("input");
+    quantity.className = "quantity";
+    quantity.id = element + "quantity";
+    quantity.type = "number";
+    quantity.min = MIN;
+    quantity.max = MAX;
+    quantity.value = cart[element];
+    quantity.style.visibility = "hidden";
+
     buttonContainer.appendChild(editButton);
     buttonContainer.appendChild(removeButton);
 
+    parentButtonContainer.appendChild(quantity);
+    parentButtonContainer.appendChild(buttonContainer);
+
     container.appendChild(itemCost);
-    container.appendChild(buttonContainer);
+    container.appendChild(parentButtonContainer);
 
     itemContainer.appendChild(items);
     itemContainer.appendChild(container);
@@ -121,5 +137,16 @@ function renderCartPreview() {
 }
 
 function renderTotal() {
-  document.getElementById("total-cost").innerHTML = "$" + getTotal();
+  document.getElementById("total-cost").innerHTML = "";
+
+  let totalCost = document.createElement("div");
+  totalCost.innerHTML = "Total Cost";
+  let costContainer = document.createElement("div");
+  costContainer.innerHTML = "$" + getTotal();
+  // let dateContainer = document.createElement("div");
+  // dateContainer.innerHTML = new Date().toISOString().slice(0, 10);
+
+  document.getElementById("total-cost").appendChild(totalCost);
+  document.getElementById("total-cost").appendChild(costContainer);
+  // document.getElementById("total-cost").appendChild(dateContainer);
 }

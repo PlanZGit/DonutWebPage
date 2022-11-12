@@ -27,22 +27,29 @@ document.getElementById("cart-button").addEventListener("click", function () {
 const buyBox = (itemType) => {
   return () => {
     setCart(itemType, 12);
-    setTotal(12);
   };
 };
 
 const buyOne = (itemType) => {
   return () => {
     setCart(itemType, 1);
-    setTotal(1);
   };
 };
 
 const removeItem = (itemType, amount) => {
   return () => {
     removeCartItem(itemType);
-    setTotal(amount * -1);
     renderCartAmount();
     renderCartPreview();
+  };
+};
+
+const editItem = (itemType) => {
+  return () => {
+    document.getElementById(itemType + "quantity").style.visibility = "visible";
+    // removeCartItem(itemType);
+    // setTotal(amount);
+    // renderCartAmount();
+    // renderCartPreview();
   };
 };
