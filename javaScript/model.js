@@ -52,7 +52,6 @@ function getTotal() {
   totalCost = 0;
   Object.values(getCart()).forEach((val) => {
     amount += val;
-    console.log(amount);
   });
   totalCost = productsPrice * amount;
   return totalCost.toFixed(2);

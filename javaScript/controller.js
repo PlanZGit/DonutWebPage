@@ -46,8 +46,6 @@ const removeItem = (itemType) => {
 
 const selectQuantity = (obj) => {
   return () => {
-    console.log(obj.value);
-    console.log(obj.id);
     setCart(obj.id, obj.value * 1);
     renderCartAmount();
     renderCartPreview();
