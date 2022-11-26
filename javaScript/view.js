@@ -93,11 +93,6 @@ function renderCartPreview() {
     let buttonContainer = document.createElement("div");
     buttonContainer.className = "buttonContainer";
 
-    let editButton = document.createElement("button");
-    editButton.innerText = "edit";
-    editButton.className = "editButton";
-    editButton.onclick = editItem(element);
-
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.className = "removeButton";
@@ -109,19 +104,30 @@ function renderCartPreview() {
     let parentButtonContainer = document.createElement("div");
     parentButtonContainer.className = "parentButtonContainer";
 
-    let quantity = document.createElement("input");
+    let quantity = document.createElement("select");
     quantity.className = "quantity";
     quantity.id = element + "quantity";
-    quantity.type = "number";
-    quantity.min = MIN;
-    quantity.max = MAX;
     quantity.value = cart[element];
-    quantity.style.visibility = "hidden";
+    //quantity.onchange = selectQuantity(element, quantity.value);
 
-    buttonContainer.appendChild(editButton);
+    let quantityOption = document.createElement("option");
+    quantityOption.id = element + "quantity";
+
+    quantityOption.value = cart[element];
+    quantityOption.innerText = cart[element];
+    quantity.appendChild(quantityOption);
+
+    for (let i = 1; i < 13; i++) {
+      let quantityOption = document.createElement("option");
+      quantityOption.value = i;
+      quantityOption.innerText = i;
+
+      quantity.appendChild(quantityOption);
+    }
+
+    buttonContainer.appendChild(quantity);
     buttonContainer.appendChild(removeButton);
 
-    parentButtonContainer.appendChild(quantity);
     parentButtonContainer.appendChild(buttonContainer);
 
     container.appendChild(itemCost);
