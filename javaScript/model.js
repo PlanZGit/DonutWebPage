@@ -18,7 +18,7 @@ let totalCost = 0;
 const MAX = 48;
 const MIN = 1;
 
-function setCart(donut, amount) {
+function addToCart(donut, amount) {
   if (donut in cart) {
     cart[donut] = cart[donut] + amount;
   } else {
@@ -29,6 +29,10 @@ function setCart(donut, amount) {
     cart[donut] = MAX;
   }
   renderCartAmount();
+}
+
+function setCart(donut, amount) {
+  cart[donut] = amount;
 }
 
 function getCart() {
@@ -48,7 +52,8 @@ function getTotal() {
   totalCost = 0;
   Object.values(getCart()).forEach((val) => {
     amount += val;
+    console.log(amount);
   });
-  totalCost = totalCost + productsPrice * amount;
+  totalCost = productsPrice * amount;
   return totalCost.toFixed(2);
 }

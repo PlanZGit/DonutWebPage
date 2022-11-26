@@ -26,17 +26,17 @@ document.getElementById("cart-button").addEventListener("click", function () {
 
 const buyBox = (itemType) => {
   return () => {
-    setCart(itemType, 12);
+    addToCart(itemType, 12);
   };
 };
 
 const buyOne = (itemType) => {
   return () => {
-    setCart(itemType, 1);
+    addToCart(itemType, 1);
   };
 };
 
-const removeItem = (itemType, amount) => {
+const removeItem = (itemType) => {
   return () => {
     removeCartItem(itemType);
     renderCartAmount();
@@ -44,11 +44,11 @@ const removeItem = (itemType, amount) => {
   };
 };
 
-const selectQuantity = (itemType, value) => {
-  console.log(itemType);
-  console.log(value);
+const selectQuantity = (obj) => {
   return () => {
-    setCart(itemType, value);
+    console.log(obj.value);
+    console.log(obj.id);
+    setCart(obj.id, obj.value * 1);
     renderCartAmount();
     renderCartPreview();
   };

@@ -96,7 +96,7 @@ function renderCartPreview() {
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.className = "removeButton";
-    removeButton.onclick = removeItem(element, cart[element]);
+    removeButton.onclick = removeItem(element);
 
     let container = document.createElement("div");
     container.className = "container";
@@ -106,12 +106,12 @@ function renderCartPreview() {
 
     let quantity = document.createElement("select");
     quantity.className = "quantity";
-    quantity.id = element + "quantity";
+    quantity.id = element;
     quantity.value = cart[element];
-    //quantity.onchange = selectQuantity(element, quantity.value);
 
     let quantityOption = document.createElement("option");
     quantityOption.id = element + "quantity";
+    quantity.onchange = selectQuantity(quantity);
 
     quantityOption.value = cart[element];
     quantityOption.innerText = cart[element];
