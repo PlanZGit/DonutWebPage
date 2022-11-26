@@ -44,12 +44,12 @@ const removeItem = (itemType, amount) => {
   };
 };
 
-const editItem = (itemType) => {
+const selectQuantity = (itemType, value) => {
+  console.log(itemType);
+  console.log(value);
   return () => {
-    document.getElementById(itemType + "quantity").style.visibility = "visible";
-    // removeCartItem(itemType);
-    // setTotal(amount);
-    // renderCartAmount();
-    // renderCartPreview();
+    setCart(itemType, value);
+    renderCartAmount();
+    renderCartPreview();
   };
 };
