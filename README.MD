@@ -3,7 +3,9 @@ version 1
 Donut Website
 
 Using HTMl to create header(shop name, cart, about us), nav sidebar
+
 Using JavaScript to render products in grid, calculate cost
+
 Using Css to design website, with color, font, and images
 
 # Screenshot
