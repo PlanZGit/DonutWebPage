@@ -12,7 +12,8 @@ function render(itemType) {
 
   //creates product-preview
   getProducts()[itemType].forEach((element) => {
-    //console.log(element)
+    // console.log(element.toLowerCase());
+    element = element.toLowerCase();
     let productPreview = document.createElement("div");
     productPreview.className = "product-preview";
 
@@ -21,6 +22,7 @@ function render(itemType) {
     productImage.src = "product-img/" + element + "-" + itemType + "-donut.jpg";
     productImage.alt = "product-img/" + element + "-" + itemType + "-donut.jpg";
 
+    console.log(itemType);
     let productName = document.createElement("div");
     productName.className = "product-name";
     productName.innerText =
