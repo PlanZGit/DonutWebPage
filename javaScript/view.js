@@ -12,14 +12,24 @@ function render(itemType) {
 
   //creates product-preview
   getProducts()[itemType].forEach((element) => {
-    // console.log(element.toLowerCase());
+    console.log(element.toLowerCase());
     let productPreview = document.createElement("div");
     productPreview.className = "product-preview";
 
     let productImage = document.createElement("img");
     productImage.className = "product-img";
-    productImage.src = "product-img/" + element + "-" + itemType + "-donut.jpg";
-    productImage.alt = "product-img/" + element + "-" + itemType + "-donut.jpg";
+    productImage.src =
+      "product-img/" +
+      element.toLowerCase() +
+      "-" +
+      itemType.toLowerCase() +
+      "-donut.jpg";
+    productImage.alt =
+      "product-img/" +
+      element.toLowerCase() +
+      "-" +
+      itemType.toLowerCase() +
+      "-donut.jpg";
 
     let productName = document.createElement("div");
     productName.className = "product-name";
