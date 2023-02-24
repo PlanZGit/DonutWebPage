@@ -1,6 +1,6 @@
 # Donut Webpage
 
-Works on firefox and chrome.
+Works on firefox and chrome. Edge has CSS problems.
 
 - Visit https://planzgit.github.io/DonutWebPage/
 
