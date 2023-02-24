@@ -7,8 +7,8 @@ const products = {
     "custard-filling-chocolate",
     "lemon-filling-sugarcoat",
   ],
-  twist: ["glaze", "cinnamon-Sugar"],
-  Roll: ["glaze-cinnamon"],
+  twist: ["glaze", "cinnamon-sugar"],
+  roll: ["glaze-cinnamon"],
 };
 const productsPrice = 0.5;
 const productsBoxPrice = 5.99;
