@@ -1,6 +1,6 @@
 # Donut Webpage
 
-Static Webpage. The purpose of this website design was for users to order there donuts online.
+Static Webpage. The purpose of this webpage design was for users to order there donuts online.
 
 Works on **Firefox** and **Chrome**. Edge has CSS problems.
 
