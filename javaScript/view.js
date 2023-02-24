@@ -18,8 +18,7 @@ function render(itemType) {
 
     let productImage = document.createElement("img");
     productImage.className = "product-img";
-    productImage.src =
-      "product-img/" + element.toLowerCase() + "-" + itemType + "-donut.jpg";
+    productImage.src = "product-img/" + element + "-" + itemType + "-donut.jpg";
     productImage.alt = "product-img/" + element + "-" + itemType + "-donut.jpg";
 
     let productName = document.createElement("div");
