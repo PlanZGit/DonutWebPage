@@ -1,4 +1,10 @@
-.header {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,14 +14,7 @@
   background-size: cover;
   background-position: 50%;
   background-color: white;
-
   color: white;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
 
   box-shadow: 0 5px 5px rgb(223, 223, 223);
   z-index: 100;
